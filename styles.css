@@ -1,0 +1,766 @@
+/* Daily Reads — Modern Styles */
+
+/* Premium Settings Container */
+.daily-reads-settings-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.daily-reads-settings-container h2 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-normal);
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: initial;
+}
+
+/* Sleek Minimal Tab Underline Navigation */
+.daily-reads-settings-tabs {
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid var(--background-modifier-border);
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+  background: transparent;
+  border-radius: 0;
+  padding-left: 0;
+}
+
+.daily-reads-settings-tabs button {
+  flex: none;
+  padding: 4px 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  box-shadow: none;
+  transition: color 0.15s ease;
+  position: relative;
+}
+
+.daily-reads-settings-tabs button:hover {
+  background: transparent;
+  color: var(--text-normal);
+}
+
+.daily-reads-settings-tabs button.mod-cta {
+  background: transparent;
+  color: var(--interactive-accent);
+  border: none;
+  box-shadow: none;
+}
+
+.daily-reads-settings-tabs button.mod-cta::after {
+  content: '';
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--interactive-accent);
+}
+
+/* Minimal Setting Items */
+.daily-reads-settings-container .setting-item {
+  border-bottom: 1px solid var(--background-modifier-border) !important;
+  margin-bottom: 0;
+  padding: 16px 0 !important;
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  transition: opacity 0.2s ease;
+}
+
+.daily-reads-settings-container .setting-item:hover {
+  background: transparent;
+  transform: none;
+  box-shadow: none;
+  opacity: 0.95;
+}
+
+.daily-reads-settings-container .setting-item-heading {
+  margin-top: 24px !important;
+  margin-bottom: 8px !important;
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Clean Section Headers */
+.daily-reads-settings-section {
+  margin: 2em 0 0.5em;
+  padding: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  border: none;
+  background: none;
+  border-radius: 0;
+}
+
+.daily-reads-settings-section:first-of-type {
+  margin-top: 0.5em;
+}
+
+/* Minimalist hints */
+.daily-reads-settings-hint {
+  margin: 12px 0;
+  padding: 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+.daily-reads-settings-warning {
+  margin: 12px 0;
+  padding: 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--text-warning);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+/* Panel Layout */
+
+.daily-reads-panel {
+  padding: 8px 8px;
+}
+
+/* Header & Progress Circular Chart */
+
+.daily-reads-header {
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--interactive-accent) 6%, var(--background-secondary)), var(--background-secondary));
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.03);
+}
+
+.progress-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4px;
+  position: relative;
+  width: 86px;
+  height: 86px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.daily-reads-circular-progress {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.circular-bg {
+  fill: none;
+  stroke: var(--background-modifier-border);
+  stroke-width: 2.8;
+}
+
+.circular-fg {
+  fill: none;
+  stroke: var(--interactive-accent);
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.4s ease;
+}
+
+.circular-percentage {
+  fill: var(--text-normal);
+  font-family: inherit;
+  font-size: 8px;
+  font-weight: 700;
+  text-anchor: middle;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+/* Semi-circle Gauge Support */
+.progress-container.semi-circle-container {
+  height: 44px;
+  width: 86px;
+}
+
+.daily-reads-circular-progress.semi-circle {
+  transform: none;
+}
+
+.daily-reads-circular-progress.semi-circle .circular-percentage {
+  transform: none;
+  font-size: 7.5px;
+}
+
+.stats-container {
+  display: grid;
+  gap: 8px;
+  margin-top: 6px;
+  width: 100%;
+}
+
+.stats-container.stats-seq {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.stats-container.stats-due {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.stat-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  padding: 6px 6px 6px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--text-normal) 4%, transparent);
+  border: 1px solid var(--background-modifier-border);
+  backdrop-filter: blur(8px);
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  min-width: 0;
+}
+
+.stat-badge:hover {
+  transform: translateY(-1px);
+  background: color-mix(in srgb, var(--interactive-accent) 6%, var(--background-modifier-hover));
+}
+
+.badge-icon svg {
+  width: 15px;
+  height: 15px;
+  color: var(--interactive-accent);
+  margin-bottom: 1px;
+}
+
+.stat-number {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-normal);
+}
+
+.stat-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-muted);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.stat-badge.round-highlight {
+  border-color: color-mix(in srgb, var(--interactive-accent) 45%, transparent);
+  background: color-mix(in srgb, var(--interactive-accent) 8%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--interactive-accent) 12%, transparent);
+}
+
+.stat-badge.round-highlight .stat-number {
+  color: var(--interactive-accent);
+}
+
+.badge-text {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Status Card (Celebration and Skipped Views) */
+
+.daily-reads-status-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.02);
+  margin: 8px 0;
+  transition: all 0.3s ease;
+}
+
+.daily-reads-status-card .status-icon svg {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 10px;
+}
+
+.daily-reads-status-card.success .status-icon svg {
+  color: #e5a93b;
+  filter: drop-shadow(0 2px 6px rgba(229, 169, 59, 0.35));
+  animation: bounce 2.2s infinite ease-in-out;
+}
+
+.daily-reads-status-card.skipped .status-icon svg {
+  color: var(--text-muted);
+}
+
+.daily-reads-status-card h3 {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-normal);
+}
+
+.daily-reads-status-card p {
+  margin: 0 0 14px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.daily-reads-status-card button {
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.daily-reads-status-card button:hover {
+  transform: scale(1.02);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* List Wrap & Rows */
+
+.daily-reads-list-wrapper {
+  margin-bottom: 14px;
+}
+
+.section-title {
+  margin: 8px 4px 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.daily-reads-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.daily-reads-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 10px;
+  min-height: 44px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  background: var(--background-secondary);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .daily-reads-row {
+    transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+  }
+}
+
+.daily-reads-row:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  border-color: var(--interactive-accent);
+}
+
+.daily-reads-row:focus-visible {
+  outline: 2px solid var(--interactive-accent);
+  outline-offset: 1px;
+}
+
+.daily-reads-note-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.daily-reads-note-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-normal);
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.daily-reads-kind {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: none;
+}
+
+.daily-reads-kind-new {
+  color: var(--text-accent);
+  background: color-mix(in srgb, var(--text-accent) 14%, transparent);
+}
+
+.daily-reads-kind-review {
+  color: var(--text-muted);
+  background: color-mix(in srgb, var(--text-muted) 14%, transparent);
+}
+
+/* Actions with Icon Buttons */
+
+.daily-reads-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.daily-reads-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 6px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-primary);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.daily-reads-icon-btn:hover {
+  background: var(--background-modifier-hover);
+  color: var(--text-normal);
+  border-color: var(--text-muted);
+  transform: scale(1.04);
+}
+
+.daily-reads-icon-btn svg {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.15s ease;
+}
+
+.daily-reads-icon-btn:hover svg {
+  transform: scale(1.08);
+}
+
+/* Smaller subdued variant — used for mark-read in compact rows */
+.daily-reads-icon-btn-sm {
+  width: 26px;
+  height: 26px;
+  opacity: 0.5;
+  transition: opacity 0.12s ease, transform 0.12s ease, background 0.12s ease, border-color 0.12s ease;
+}
+
+.daily-reads-icon-btn-sm:hover {
+  opacity: 1;
+  transform: scale(1.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .daily-reads-icon-btn {
+    transition: none;
+  }
+  .daily-reads-icon-btn-sm {
+    transition: none;
+  }
+  .daily-reads-icon-btn:hover {
+    transform: none;
+  }
+  .daily-reads-icon-btn:hover svg {
+    transform: none;
+  }
+  .daily-reads-icon-btn-sm:hover {
+    transform: none;
+  }
+}
+
+.daily-reads-icon-btn.check-btn:hover {
+  background: color-mix(in srgb, var(--text-success) 12%, transparent);
+  color: var(--text-success);
+  border-color: var(--text-success);
+}
+
+.daily-reads-icon-btn.later-btn:hover {
+  background: color-mix(in srgb, var(--interactive-accent) 12%, transparent);
+  color: var(--interactive-accent);
+  border-color: var(--interactive-accent);
+}
+
+/* Completed List Row Styles */
+
+.completed-list .daily-reads-row {
+  opacity: 0.65;
+  background: var(--background-primary-alt);
+}
+
+.completed-list .daily-reads-row:hover {
+  opacity: 0.85;
+}
+
+.completed-list .daily-reads-note-name {
+  text-decoration: line-through;
+}
+
+/* Empty placeholder */
+
+.daily-reads-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 12px;
+  border: 1px dashed var(--background-modifier-border);
+  border-radius: 12px;
+  background: var(--background-primary-alt);
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.empty-icon svg {
+  width: 28px;
+  height: 28px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  opacity: 0.7;
+}
+
+.empty-text {
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+.rebuild-btn {
+  padding: 5px 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.rebuild-btn:hover {
+  background: var(--background-modifier-hover);
+  border-color: var(--text-muted);
+}
+
+/* Folder Pills in Settings */
+.daily-reads-folders-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0;
+  padding: 8px;
+  background: var(--background-primary-alt);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  min-height: 40px;
+}
+
+.daily-reads-folder-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px 4px 10px;
+  background: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  font-size: 0.82rem;
+  color: var(--text-normal);
+  line-height: 1.2;
+}
+
+.daily-reads-folder-pill-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.75rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.daily-reads-folder-pill-close:hover {
+  background: var(--background-modifier-error-hover, #c13d3d);
+  color: var(--text-on-accent, #fff);
+}
+
+/* Section Title Row with Read Ahead button */
+.section-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.daily-reads-read-ahead-btn {
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: transparent;
+  border: 1px solid var(--background-modifier-border);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-weight: 500;
+  box-shadow: none;
+}
+
+.daily-reads-read-ahead-btn:hover {
+  background: var(--background-modifier-hover);
+  color: var(--text-normal);
+  border-color: var(--interactive-accent);
+}
+
+/* Overall Reading Progress Bar */
+.daily-reads-total-progress-container {
+  padding: 10px 8px 12px;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.daily-reads-total-progress-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.daily-reads-total-progress-title .count-text {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-normal);
+}
+
+.daily-reads-total-progress-bar {
+  display: flex;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--background-secondary);
+  margin-bottom: 6px;
+}
+
+.progress-segment {
+  height: 100%;
+  transition: width 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.progress-segment.read-notes {
+  background-color: var(--interactive-success);
+  opacity: 0.85;
+}
+
+.progress-segment.initial-notes {
+  background-color: var(--background-modifier-border-hover);
+}
+
+.progress-segment.new-notes {
+  background-color: var(--interactive-accent);
+  opacity: 0.85;
+}
+
+.daily-reads-total-progress-legend {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-dot.read-notes {
+  background-color: var(--interactive-success);
+}
+
+.legend-dot.initial-notes {
+  background-color: var(--background-modifier-border-hover);
+}
+
+.legend-dot.new-notes {
+  background-color: var(--interactive-accent);
+}
+
+.daily-reads-read-ahead-btn.success-card-btn {
+  margin-top: 14px;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.daily-reads-read-ahead-btn.success-card-btn:hover {
+  background: var(--interactive-accent-hover);
+  color: var(--text-on-accent);
+  transform: translateY(-1px);
+}

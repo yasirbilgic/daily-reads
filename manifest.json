@@ -1,0 +1,10 @@
+{
+  "id": "obsidian-daily-reads",
+  "name": "Daily Reads",
+  "version": "1.3.0",
+  "minAppVersion": "1.5.0",
+  "description": "Spaced-repetition reading scheduler for reviewing entire notes at optimal intervals. Select directories, read notes daily with SM-2 algorithm.",
+  "author": "",
+  "authorUrl": "",
+  "isDesktopOnly": false
+}
